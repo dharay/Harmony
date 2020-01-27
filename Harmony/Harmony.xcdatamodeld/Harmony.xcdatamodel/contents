@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14133" systemVersion="17E199" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CurrentPlaylistEntity" representedClassName="CurrentPlaylistEntity" syncable="YES" codeGenerationType="class">
+        <relationship name="relationshipToSong" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SongEntity" inverseName="relationship1" inverseEntity="SongEntity" syncable="YES"/>
+    </entity>
+    <entity name="PlaylistEntity" representedClassName="PlaylistEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="order" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="relationship" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SongEntity" inverseName="relationship" inverseEntity="SongEntity" syncable="YES"/>
+    </entity>
+    <entity name="SongEntity" representedClassName="SongEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="album" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="artist" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isFavourite" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="lyrics" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="playCount" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="relationship" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PlaylistEntity" inverseName="relationship" inverseEntity="PlaylistEntity" syncable="YES"/>
+        <relationship name="relationship1" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CurrentPlaylistEntity" inverseName="relationshipToSong" inverseEntity="CurrentPlaylistEntity" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="CurrentPlaylistEntity" positionX="99" positionY="9" width="128" height="60"/>
+        <element name="PlaylistEntity" positionX="268" positionY="-81" width="128" height="90"/>
+        <element name="SongEntity" positionX="-63" positionY="-18" width="225" height="165"/>
+    </elements>
+</model>

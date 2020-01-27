@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlaylistCell" customModule="Harmony" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PlaylistCell" customModule="Harmony" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="62"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AX7-0X-OPe">
+                    <rect key="frame" x="0.0" y="0.0" width="267" height="62"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TqO-YJ-lRo">
+                    <rect key="frame" x="275" y="0.0" width="40" height="62"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="Mb6-ER-b4n"/>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="62" id="v7K-1Z-HcS"/>
+                    </constraints>
+                    <connections>
+                        <action selector="favAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="TLQ-iS-aUv"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JRz-Te-8qs">
+                    <rect key="frame" x="315" y="0.0" width="60" height="62"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="1C3-Ud-bB9"/>
+                    </constraints>
+                    <state key="normal">
+                        <attributedString key="attributedTitle">
+                            <fragment content="⠇">
+                                <attributes>
+                                    <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <font key="NSFont" size="46" name="AppleBraille"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                    </state>
+                    <connections>
+                        <action selector="optionAction:" destination="-1" eventType="touchUpInside" id="Q4k-Qf-QkB"/>
+                        <action selector="optionAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="zVh-6Z-rk3"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.62793160339999998" green="0.97491407870000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="AX7-0X-OPe" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="7rj-Zg-TXR"/>
+                <constraint firstItem="TqO-YJ-lRo" firstAttribute="leading" secondItem="AX7-0X-OPe" secondAttribute="trailing" constant="8" id="FYT-tr-8ZG"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="JRz-Te-8qs" secondAttribute="bottom" id="K7l-MG-ecC"/>
+                <constraint firstItem="AX7-0X-OPe" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Qd2-ha-n8N"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="JRz-Te-8qs" secondAttribute="trailing" id="eAf-Gd-WaO"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="TqO-YJ-lRo" secondAttribute="bottom" id="hSP-1l-IV4"/>
+                <constraint firstItem="JRz-Te-8qs" firstAttribute="leading" secondItem="TqO-YJ-lRo" secondAttribute="trailing" id="lVt-gI-Joy"/>
+                <constraint firstItem="JRz-Te-8qs" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="m0B-TZ-NGi"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="AX7-0X-OPe" secondAttribute="bottom" id="mRH-gs-8L6"/>
+                <constraint firstItem="TqO-YJ-lRo" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="qdq-7P-CxL"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="favButton" destination="TqO-YJ-lRo" id="ce3-7c-l3A"/>
+                <outlet property="songLabel" destination="AX7-0X-OPe" id="Tpv-6G-sdz"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="-221"/>
+        </view>
+    </objects>
+</document>
